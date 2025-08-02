@@ -41,6 +41,7 @@ Create a `.env.local` file in the root directory with the following content:
 ```
 # Server-side only secret
 SECRET_KEY="YOUR_GTM_ID"
+ZAPIER_WEBHOOK_ENDPOINT="YOUR_ZAPIER_WEBHOOK_ENDPOINT"
 ```
 
 This environment variable is used for Google Tag Manager integration.

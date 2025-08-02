@@ -44,14 +44,14 @@ export default function ContactForm() {
     const JSONdata = JSON.stringify(data);
     
 
-    const endpoint = "https://hooks.zapier.com/hooks/catch/24015437/u43ke4o/";
+    const endpoint = process.env.ZAPIER_WEBHOOK_ENDPOINT;
     const options = {
       method: "POST",
 
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
+    const response = await fetch(String(endpoint), options);
 
 
     if (response.ok) {
